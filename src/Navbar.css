@@ -1,0 +1,38 @@
+menu{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(55, 53, 53,.5);
+    
+    justify-content:space-between;
+    align-items:center;
+    height: 40px;
+    border-radius: 10px;
+    
+}
+.menu-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 0px 20px;
+    
+}
+.logo{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    background-color: gold;
+    border-radius: 3px;
+   
+}
+li{
+    list-style: none; 
+}
+a{
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    color: whitesmoke;
+}
+a:hover{
+    text-decoration:underline red;
+
+}

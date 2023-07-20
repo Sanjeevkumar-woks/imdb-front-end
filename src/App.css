@@ -1,38 +1,98 @@
+body {
+  background-color: rgb(27, 26, 26);
+}
+
 .App {
-  text-align: center;
+  margin: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movielist-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  height: 330px;
+  padding: 3px;
+  position: relative;
+  background-color: goldenrod;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  width: 10%;
+  height: 10%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: lightblue;
+  opacity: 0.1;
+  transition: all 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 0 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card::after {
+  bottom: 25px;
+  left: 0;
+  border-radius: 0 100% 0 15px;
 }
+
+.card:hover::before,
+.card:hover:after {
+  width: 100%;
+  height: 90%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.card-header {
+  margin: 0px;
+}
+.poster {
+  height: 280px;
+  width: 100%;
+  margin-bottom: 1px;
+  border-top-left-radius: 8%;
+  border-top-right-radius: 8%;
+  object-fit: cover;
+}
+.card-details {
+  height: 306px;
+  width: 100%;
+  color: whitesmoke;
+  background-color: black;
+  border-top-left-radius: 8%;
+  border-top-right-radius: 8%;
+  margin: 0px;
+}
+.card-name {
+  margin: 0px;
+  font-weight: bolder;
+  font-size: 1.05rem;
+}
+
+.card-button {
+  margin: 0px;
+  border: none;
+  padding: 2px;
+  font-weight: bolder;
+  color: goldenrod;
+  background-color: black;
+  width: 100%;
+  border-radius: 20px;
+}
+
